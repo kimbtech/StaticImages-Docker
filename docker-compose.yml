@@ -2,3 +2,23 @@
 # this file is only for testing/ development
 
 version: "2"
+
+services:
+  drawio:
+    image: kimbtech/servers:drawio
+    container_name: drawio
+    ports:
+      - "127.0.0.1:8080:80"
+    restart: always
+  kee:
+    image: kimbtech/servers:kee
+    container_name: kee
+    ports:
+      - "127.0.0.1:8081:80"
+    restart: always
+  pass:
+    image: kimbtech/servers:pass
+    container_name: pass
+    ports:
+      - "127.0.0.1:8082:80"
+    restart: always

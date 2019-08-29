@@ -7,7 +7,7 @@ zipurl=$(php -r 'echo json_decode( file_get_contents( "https://api.github.com/re
 curl -L $zipurl -o $1/draw/l.zip
 # unzip
 mkdir $1/draw/u
-unzip $1/draw/l.zip -d $1/draw/u
+unzip -q $1/draw/l.zip -d $1/draw/u
 
 # load relevant
 mkdir $1/draw/web
