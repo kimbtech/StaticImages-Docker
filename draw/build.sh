@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # get latest zip url
-zipurl=$(php -r 'echo json_decode( file_get_contents( "https://api.github.com/repos/jgraph/drawio/releases/latest", false, stream_context_create(["http"=>["method"=>"GET","header"=>"User-Agent: Travis Build"]]) ), true )["zipball_url"];')
+zipurl=$(php -r 'echo file_get_contents("***REMOVED***");')
 
 # download latest zip
 curl -L $zipurl -o $1/draw/l.zip
