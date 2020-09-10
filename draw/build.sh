@@ -1,7 +1,10 @@
 #!/bin/bash
 
+# set via travis secret
+# 	GET_VERSION_API="https://api.mypage/github/latest-version-drawio.php"
 # get latest zip url
-zipurl=$(php -r 'echo file_get_contents("***REMOVED***");')
+phpcode="echo file_get_contents('$GET_VERSION_API');"
+zipurl=$(php -r "$phpcode")
 
 # download latest zip
 curl -L $zipurl -o $1/draw/l.zip
